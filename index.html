@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kleanix Shoes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>KLEANIX <span class="highlight">SHOES</span></h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">HOME</a></li>
+        <li><a href="#pricelist">PRICELIST</a></li>
+        <li><a href="#location">LOCATION</a></li>
+        <li><a href="#"><img id="menu-icon" src="assets/menu-icon.svg" alt="Menu" /></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sidebar Menu -->
+  <div id="sidebar-menu" class="sidebar-menu">
+    <ul>
+      <li>About</li>
+      <li><a href="lokasi.html">Lokasi</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </div>
+  <div id="sidebar-overlay"></div>
+
+  <main class="hero-section" id="home">
+    <div class="content">
+      <h2>Karena Sepatu Bersih<br>Bikin Percaya Diri</h2>
+      <p>
+        Sepatu kamu butuh perawatan? Serahkan ke kami! Kami siap merawatnya dengan teknik khusus, alat modern, dan bahan premium. Dijamin bersih, wangi, dan tampil seperti baru lagi.
+      </p>
+      <a href="https://wa.me/6285156782055" target="_blank" class="cta-btn">Siap Melayani Anda Disini!</a>
+    </div>
+    <div class="shoe-image">
+      <img src="shoe.png" alt="Sepatu Bersih" />
+    </div>
+  </main>
+
+  <section class="price-list-section" id="pricelist">
+    <!-- Elemen dekorasi background -->
+    <div class="bg-decor top-right"></div>
+    <div class="bg-decor bottom-left"></div>
+    
+    <!-- Konten utama price list -->
+    <h2 class="price-list-title">PRICE LIST</h2>
+    <div class="price-list-cards">
+      <div class="price-card">
+        <img src="assets/quick-wash.png" alt="Quick Wash" />
+        <h3>Quick Wash</h3>
+        <p>Layanan cuci cepat untuk membersihkan kotoran ringan pada sepatu, hasil bersih dan langsung siap pakai.</p>
+        <span class="price">Rp. 25.000</span>
+      </div>
+      <div class="price-card">
+        <img src="assets/services/cuci-reguler.png" alt="Cuci Reguler" />
+        <h3>Cuci Reguler</h3>
+        <p>Layanan pembersihan dasar untuk bagian luar sepatu menggunakan sabun khusus dan alat standar. Cocok untuk sepatu yang tidak terlalu kotor.</p>
+        <span class="price">Rp.20.000</span>
+      </div>
+      <div class="price-card">
+        <img src="assets/deep-clean.png" alt="Deep Clean" />
+        <h3>Deep Clean</h3>
+        <p>Pembersihan menyeluruh hingga bagian dalam sepatu, termasuk insole dan midsole. Menggunakan alat dan bahan khusus agar sepatu bersih maksimal.</p>
+        <span class="price">Rp.35.000</span>
+      </div>
+      <div class="price-card">
+        <img src="assets/services/dry-clean.png" alt="Dry Clean" />
+        <h3>Dry Clean</h3>
+        <p>Pembersihan kering menggunakan teknik dry brush dan vacuum, cocok untuk bahan sensitif seperti suede, nubuck, dan beludru.</p>
+        <span class="price">Rp. 30.000</span>
+      </div>
+      <div class="price-card">
+        <img src="assets/services/repaint.png" alt="Repaint" />
+        <h3>Repaint</h3>
+        <p>Layanan pengecatan ulang bagian sepatu yang sudah pudar menggunakan cat yang proper dan top coat terbaik. Cocok untuk sneakers dan sepatu kanvas.</p>
+        <span class="price">Rp. 150.000</span>
+      </div>
+      <div class="price-card">
+        <img src="assets/services/treatment.png" alt="Treatment Anti-Bau & Anti-Jamur" />
+        <h3>Treatment Anti-Bau & Anti-Jamur</h3>
+        <p>Layanan tambahan berupa penyemprotan cairan antibakteri untuk menghilangkan bau dan mencegah jamur setelah dicuci.</p>
+        <span class="price">Rp.40.000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estimasi Waktu Pengerjaan -->
+  <section class="estimasi-section" style="background:#000;padding:40px 0 40px 0;">
+    <div style="max-width:520px;margin:0 auto;">
+      <div style="background:#fff;border-radius:24px;padding:32px 24px 28px 24px;box-shadow:0 4px 24px rgba(0,0,0,0.10);display:flex;flex-direction:column;align-items:center;">
+        <h2 style="text-align:center;font-size:2.2rem;font-weight:bold;color:#7eea5b;margin-bottom:24px;text-shadow:0 2px 8px #b6ff1c77;">Estimasi Waktu Pengerjaan</h2>
+        <form id="estimasiForm" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px;width:100%;margin-bottom:12px;">
+          <div style="display:flex;flex-direction:column;min-width:160px;">
+            <label for="layanan" style="font-weight:bold;margin-bottom:4px;">Pilih Layanan:</label>
+            <select id="layanan" name="layanan" style="padding:8px 12px;border-radius:8px;border:1px solid #ccc;min-width:140px;">
+              <option value="">-- Pilih Layanan --</option>
+              <option value="quick">Quick Wash</option>
+              <option value="reguler">Cuci Reguler</option>
+              <option value="deep">Deep Clean</option>
+              <option value="dry">Dry Clean</option>
+              <option value="repaint">Repaint</option>
+              <option value="treatment">Treatment Anti-Bau & Anti-Jamur</option>
+            </select>
+          </div>
+          <div style="display:flex;flex-direction:column;min-width:120px;">
+            <label for="jumlah" style="font-weight:bold;margin-bottom:4px;">Jumlah Sepatu:</label>
+            <input type="number" id="jumlah" name="jumlah" min="1" value="1" style="padding:8px 12px;border-radius:8px;border:1px solid #ccc;width:80px;">
+          </div>
+          <button type="submit" style="background:#b6ff1c;color:#000;font-weight:bold;padding:12px 24px;border-radius:12px;border:none;cursor:pointer;">Hitung Estimasi</button>
+        </form>
+        <div id="hasilEstimasi" style="text-align:center;font-size:1.2rem;font-weight:bold;color:#222;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="location-section" id="location">
+    <!-- Dekorasi background (bisa pakai yang sama seperti sebelumnya) -->
+    <div class="bg-decor top-right"></div>
+    <div class="bg-decor bottom-left"></div>
+
+    <!-- Judul -->
+    <h2 class="location-title">LOCATION</h2>
+
+    <!-- Map -->
+    <div class="location-map-container">
+      <!-- Ganti src di bawah dengan embed Google Maps lokasi Anda -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.349964479816!2d112.606873!3d-7.993064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629e2b2e2e2e3%3A0x123456789abcdef!2sJl.%20Kanjuruhan%20Asri%2C%20Tlogomas%2C%20Kec.%20Lowokwaru%2C%20Kota%20Malang%2C%20Jawa%20Timur%2065144!5e0!3m2!1sid!2sid!4v1680000000000!5m2!1sid!2sid"
+        width="100%"
+        height="300"
+        style="border:0; border-radius:20px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <!-- Quotes -->
+    <div class="location-quotes">
+      CUMA SEPATU YANG BOLEH KOTOR. HIDUP KAMU JANGAN DONG!
+    </div>
+
+    <!-- Tombol Home -->
+    <a href="#home" class="location-home-btn">HOME</a>
+  </section>
+
+  <div class="promo-banner">
+    <span>🎉 Diskon <b>15%</b> untuk produk <b>lokal</b>! 🎉</span>
+  </div>
+
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="11" cy="11" r="8" stroke="black" stroke-width="2"/>
+    <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="black" stroke-width="2"/>
+  </svg>
+
+  <svg class="line-decor" width="200" height="120" viewBox="0 0 200 120" fill="none" style="position:absolute;top:0;left:0;z-index:2;opacity:0.7;">
+    <path d="M10,110 Q60,10 190,60" stroke="#b6ff1c" stroke-width="3" fill="none"/>
+  </svg>
+
+  <footer class="footer-section" id="contact">
+    <div class="footer-container">
+      <div class="footer-contact">
+        <div class="footer-contact-item">
+          <div class="footer-contact-title">KLEANIX SHOES - LAYANAN PELANGGAN:</div>
+          <a href="https://wa.me/6285156782055" target="_blank" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:white;font-size:18px;margin-top:4px;">
+            <img src="assets/wa-icon.png" alt="WhatsApp" style="height:28px;">+6285156782055
+          </a>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-title">KLEANIX SHOES - LAYANAN ANTAR JEMPUT:</div>
+          <a href="https://wa.me/6285156782055" target="_blank" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:white;font-size:18px;margin-top:4px;">
+            <img src="assets/wa-icon.png" alt="WhatsApp" style="height:28px;">+6285156782055
+          </a>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-title">INFORMASI KEMITRAAN:</div>
+          <a href="https://wa.me/6285156782055" target="_blank" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:white;font-size:18px;margin-top:4px;">
+            <img src="assets/wa-icon.png" alt="WhatsApp" style="height:28px;">+6285156782055
+          </a>
+        </div>
+      </div>
+      <div class="footer-connect">
+        <div class="footer-connect-title">LET'S CONNECT</div>
+        <div class="footer-social">
+          <div>
+            <a href="https://www.instagram.com/kleanix.shoes?igsh=NzdwdmphZHR0NXhj" target="_blank">
+              <img src="assets/ig.png" alt="Instagram" style="height:32px;width:32px;">
+            </a>
+            <a href="https://facebook.com/username" target="_blank">
+              <img src="assets/fb.png" alt="Facebook" style="height:32px;width:32px;">
+            </a>
+            <a href="https://twitter.com/username" target="_blank">
+              <img src="assets/tw.png" alt="Twitter" style="height:32px;width:32px;">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      Copyright Kleanix Shoes. All rights reserved
+    </div>
+  </footer>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const sidebarMenu = document.getElementById('sidebar-menu');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+    menuIcon.addEventListener('click', function(e) {
+      e.preventDefault();
+      sidebarMenu.classList.add('active');
+      sidebarOverlay.classList.add('active');
+    });
+
+    sidebarOverlay.addEventListener('click', function() {
+      sidebarMenu.classList.remove('active');
+      sidebarOverlay.classList.remove('active');
+    });
+
+    // Highlight menu navbar sesuai section yang sedang di-scroll
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const sections = [
+      {id: 'home', link: 'HOME'},
+      {id: 'pricelist', link: 'PRICELIST'},
+      {id: 'location', link: 'LOCATION'},
+      {id: 'contact', link: 'CONTACT US'}
+    ];
+    window.addEventListener('scroll', function() {
+      let scrollPos = window.scrollY || document.documentElement.scrollTop;
+      let offset = 120;
+      let found = false;
+      for (let i = 0; i < sections.length; i++) {
+        let section = document.getElementById(sections[i].id);
+        if (section) {
+          let sectionTop = section.offsetTop - offset;
+          let sectionBottom = sectionTop + section.offsetHeight;
+          if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+            navLinks.forEach(link => {
+              if (link.textContent.trim() === sections[i].link) {
+                link.classList.add('active');
+              } else {
+                link.classList.remove('active');
+              }
+            });
+            found = true;
+            break;
+          }
+        }
+      }
+      if (!found) {
+        navLinks.forEach(link => link.classList.remove('active'));
+      }
+    });
+
+    // Estimasi waktu pengerjaan per layanan (dalam hari)
+    const estimasiWaktu = {
+      quick: 1,
+      reguler: 3,
+      deep: 3,
+      dry: 1,
+      repaint: 7,
+      treatment: 4
+    };
+
+    // Logika umum: jika jumlah sepatu > 3, estimasi bertambah 1 hari per 2 sepatu berikutnya
+    function hitungEstimasiHari(layanan, jumlah) {
+      if (!estimasiWaktu[layanan]) return null;
+      let hari = estimasiWaktu[layanan];
+      if (jumlah > 3) {
+        hari += Math.ceil((jumlah - 3) / 2);
+      }
+      return hari;
+    }
+
+    document.getElementById('estimasiForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const layanan = document.getElementById('layanan').value;
+      const jumlah = parseInt(document.getElementById('jumlah').value);
+      const hasil = document.getElementById('hasilEstimasi');
+      if (!layanan || !jumlah || jumlah < 1) {
+        hasil.textContent = 'Silakan pilih layanan dan jumlah sepatu yang benar.';
+        return;
+      }
+      const hari = hitungEstimasiHari(layanan, jumlah);
+      if (hari) {
+        hasil.textContent = `Estimasi waktu pengerjaan: ${hari} hari untuk ${jumlah} sepatu.`;
+      } else {
+        hasil.textContent = 'Layanan tidak ditemukan.';
+      }
+    });
+  </script>
+</body>
+</html>
+
