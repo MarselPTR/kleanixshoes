@@ -11,18 +11,21 @@
     <div class="logo">
       <h1>KLEANIX <span class="highlight">SHOES</span></h1>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#home" class="active">HOME</a></li>
-        <li><a href="#pricelist">PRICELIST</a></li>
-        <li><a href="#location">LOCATION</a></li>
-        <li><a href="#"><img id="menu-icon" src="assets/menu-icon.svg" alt="Menu" /></a></li>
-      </ul>
-    </nav>
+    <div class="nav-wrapper">
+      <nav>
+        <ul>
+          <li><a href="#home" class="active">HOME</a></li>
+          <li><a href="#pricelist">PRICELIST</a></li>
+          <li><a href="#location">LOCATION</a></li>
+        </ul>
+      </nav>
+      <img id="menu-icon" src="assets/menu-icon.svg" alt="Menu" />
+    </div>
   </header>
 
   <!-- Sidebar Menu -->
   <div id="sidebar-menu" class="sidebar-menu">
+    <div id="close-icon" class="close-icon">&times;</div>
     <ul>
       <li>About</li>
       <li><a href="lokasi.html">Lokasi</a></li>
@@ -145,7 +148,7 @@
 
     <!-- Quotes -->
     <div class="location-quotes">
-      CUMA SEPATU YANG BOLEH KOTOR. HIDUP KAMU JANGAN DONG!
+      CUMA KOK KOTOR. GA BOLEH DONG KLEANIX IN AJA!
     </div>
 
     <!-- Tombol Home -->
@@ -211,6 +214,7 @@
 
   <script>
     const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
     const sidebarMenu = document.getElementById('sidebar-menu');
     const sidebarOverlay = document.getElementById('sidebar-overlay');
 
@@ -219,11 +223,14 @@
       sidebarMenu.classList.add('active');
       sidebarOverlay.classList.add('active');
     });
-
-    sidebarOverlay.addEventListener('click', function() {
+    
+    function closeSidebar() {
       sidebarMenu.classList.remove('active');
       sidebarOverlay.classList.remove('active');
-    });
+    }
+
+    closeIcon.addEventListener('click', closeSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
 
     // Highlight menu navbar sesuai section yang sedang di-scroll
     const navLinks = document.querySelectorAll('nav ul li a');
