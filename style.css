@@ -931,6 +931,10 @@
   /* Hapus atau nonaktifkan blok ini */
   /* @media (max-width: 600px) { ... } */
 
+  .line-decor {
+    display: none;
+  }
+
   .price-list-title,
   .location-title {
     text-align: center;
